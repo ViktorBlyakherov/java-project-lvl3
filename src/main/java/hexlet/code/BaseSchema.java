@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * Класс базовой схемы, для наследования остальных схем.
+ *  Класс базовой схемы, для наследования остальных схем.
  */
 public abstract class  BaseSchema {
     private List<Predicate> predicates = new ArrayList<>();
