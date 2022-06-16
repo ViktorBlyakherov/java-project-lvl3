@@ -11,7 +11,7 @@ public final class RangePredicate implements Predicate {
 
     @Override
     public boolean check(Object o) {
-        if (o == null) {
+        if (o == null || !(o instanceof Integer)) {
             return false;
         }
 
