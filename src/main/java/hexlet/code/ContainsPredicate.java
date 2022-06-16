@@ -3,7 +3,7 @@ package hexlet.code;
 public final class ContainsPredicate implements Predicate {
     private String pattern;
 
-    ContainsPredicate(String inpPattern) {
+    public ContainsPredicate(String inpPattern) {
         this.pattern = inpPattern;
     }
 

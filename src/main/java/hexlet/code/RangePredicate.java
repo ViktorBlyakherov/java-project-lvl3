@@ -4,7 +4,7 @@ public final class RangePredicate implements Predicate {
     private Integer fromNumber;
     private Integer toNumber;
 
-    RangePredicate(Integer inpFromNumber, Integer inpToNumber) {
+    public RangePredicate(Integer inpFromNumber, Integer inpToNumber) {
         this.fromNumber = inpFromNumber;
         this.toNumber = inpToNumber;
     }

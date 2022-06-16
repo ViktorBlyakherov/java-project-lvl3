@@ -5,7 +5,7 @@ import java.util.Map;
 public final class SizeOfPredicate implements Predicate {
     private Integer size;
 
-    SizeOfPredicate(Integer inpSize) {
+    public SizeOfPredicate(Integer inpSize) {
         this.size = inpSize;
     }
     @Override

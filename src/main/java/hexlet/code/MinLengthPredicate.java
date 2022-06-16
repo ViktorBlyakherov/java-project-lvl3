@@ -3,7 +3,7 @@ package hexlet.code;
 public final class MinLengthPredicate implements Predicate {
     private int countDigit;
 
-    MinLengthPredicate(Integer inpCountDigit) {
+    public MinLengthPredicate(Integer inpCountDigit) {
         this.countDigit = inpCountDigit;
     }
 
