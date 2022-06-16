@@ -102,7 +102,7 @@ public class TestValidator {
         assertEquals(schema.isValid(human1), true); // true
 
         Map<String, Object> human2 = new HashMap<>();
-        human2.put("name", "Maya");
+        human2.put("name", "Mayaa");
         human2.put("age", null);
         assertEquals(schema.isValid(human2), true); // true
 
