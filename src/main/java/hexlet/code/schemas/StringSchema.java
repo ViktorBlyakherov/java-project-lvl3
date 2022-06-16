@@ -1,4 +1,9 @@
-package hexlet.code;
+package hexlet.code.schemas;
+
+import hexlet.code.ContainsPredicate;
+import hexlet.code.MinLengthPredicate;
+import hexlet.code.RequiredStringPredicate;
+
 public final class StringSchema extends BaseSchema {
 
     @Override

@@ -1,4 +1,9 @@
-package hexlet.code;
+package hexlet.code.schemas;
+
+import hexlet.code.PositivePredicate;
+import hexlet.code.RangePredicate;
+import hexlet.code.RequiredNumberPredicate;
+
 public final class NumberSchema extends BaseSchema {
     @Override
     public BaseSchema required() {

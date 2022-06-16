@@ -1,4 +1,7 @@
-package hexlet.code;
+package hexlet.code.schemas;
+
+import hexlet.code.RequiredMapPredicate;
+import hexlet.code.SizeOfPredicate;
 
 import java.util.HashMap;
 import java.util.Map;
