@@ -13,7 +13,8 @@ plugins {
     id 'jacoco'
 }
 
-group = 'io.hexlet'
+group = 'hexlet.code'
+version = '1.0.3-SNAPSHOT'
 
 test {
     finalizedBy jacocoTestReport // report is always generated after tests run
