@@ -6,17 +6,17 @@ import hexlet.code.RequiredNumberPredicate;
 
 public final class NumberSchema extends BaseSchema {
     @Override
-    public BaseSchema required() {
+    public NumberSchema required() {
         getPredicates().add(new RequiredNumberPredicate());
         return this;
     }
 
-    public BaseSchema positive() {
+    public NumberSchema positive() {
         getPredicates().add(new PositivePredicate());
         return this;
     }
 
-    public BaseSchema range(Integer fromNumber, Integer toNumber) {
+    public NumberSchema range(Integer fromNumber, Integer toNumber) {
         getPredicates().add(new RangePredicate(fromNumber, toNumber));
         return this;
     }

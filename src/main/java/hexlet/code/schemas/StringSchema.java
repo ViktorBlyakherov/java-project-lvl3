@@ -7,17 +7,17 @@ import hexlet.code.RequiredStringPredicate;
 public final class StringSchema extends BaseSchema {
 
     @Override
-    public BaseSchema required() {
+    public StringSchema required() {
         getPredicates().add(new RequiredStringPredicate());
         return this;
     }
 
-    public BaseSchema minLength(Integer countDigit) {
+    public StringSchema minLength(Integer countDigit) {
         getPredicates().add(new MinLengthPredicate(countDigit));
         return this;
     }
 
-    public BaseSchema contains(String pattern) {
+    public StringSchema contains(String pattern) {
         getPredicates().add(new ContainsPredicate(pattern));
         return this;
     }

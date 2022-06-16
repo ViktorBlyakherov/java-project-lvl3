@@ -15,7 +15,7 @@ public final class MapSchema extends BaseSchema {
     }
 
     @Override
-    public BaseSchema required() {
+    public MapSchema required() {
         getPredicates().add(new RequiredMapPredicate());
         return this;
     }
@@ -39,7 +39,7 @@ public final class MapSchema extends BaseSchema {
         return true;
     }
 
-    public BaseSchema sizeof(Integer size) {
+    public MapSchema sizeof(Integer size) {
         getPredicates().add(new SizeOfPredicate(size));
         return this;
     }
