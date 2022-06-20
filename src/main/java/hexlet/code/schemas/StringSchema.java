@@ -1,24 +1,22 @@
 package hexlet.code.schemas;
-
-import hexlet.code.ContainsPredicate;
-import hexlet.code.MinLengthPredicate;
-import hexlet.code.RequiredStringPredicate;
-
 public final class StringSchema extends BaseSchema {
 
     @Override
     public StringSchema required() {
-        getPredicates().add(new RequiredStringPredicate());
+        getPredicates().put("required", value -> value != null && value instanceof String
+                && ((String) value).length() > 0);
         return this;
     }
 
     public StringSchema minLength(Integer countDigit) {
-        getPredicates().add(new MinLengthPredicate(countDigit));
+        getPredicates().put("minLength", value -> value != null && value instanceof String
+                && ((String) value).length() >= countDigit);
         return this;
     }
 
     public StringSchema contains(String pattern) {
-        getPredicates().add(new ContainsPredicate(pattern));
+        getPredicates().put("contains", value -> value != null && value instanceof String
+                && ((String) value).contains(pattern));
         return this;
     }
 }

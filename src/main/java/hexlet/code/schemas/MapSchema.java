@@ -1,8 +1,4 @@
 package hexlet.code.schemas;
-
-import hexlet.code.RequiredMapPredicate;
-import hexlet.code.SizeOfPredicate;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +12,7 @@ public final class MapSchema extends BaseSchema {
 
     @Override
     public MapSchema required() {
-        getPredicates().add(new RequiredMapPredicate());
+        getPredicates().put("required", value -> value instanceof Map<?, ?>);
         return this;
     }
 
@@ -40,7 +36,8 @@ public final class MapSchema extends BaseSchema {
     }
 
     public MapSchema sizeof(Integer size) {
-        getPredicates().add(new SizeOfPredicate(size));
+        getPredicates().put("sizeof", value -> value != null && value instanceof Map<?, ?>
+                && ((Map<?, ?>) value).size() == size);
         return this;
     }
 }

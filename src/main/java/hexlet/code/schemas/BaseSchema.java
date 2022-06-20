@@ -1,16 +1,15 @@
 package hexlet.code.schemas;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.function.Predicate;
 
-import hexlet.code.Predicate;
-
-import java.util.ArrayList;
-import java.util.List;
 /**
  *  Класс базовой схемы, для наследования остальных схем.
  */
 public abstract class  BaseSchema {
-    private List<Predicate> predicates = new ArrayList<>();
+    private Map<String, Predicate> predicates = new LinkedHashMap<>();
 
-    public final List<Predicate> getPredicates() {
+    public final Map<String, Predicate> getPredicates() {
         return predicates;
     }
 /**
@@ -22,8 +21,8 @@ public abstract class  BaseSchema {
         if (predicates.size() == 0) {
             return true;
         }
-        for (Predicate p : predicates) {
-            if (!p.check(o)) {
+        for (Predicate p : predicates.values()) {
+            if (!p.test(o)) {
                 return false;
             }
         }
