@@ -9,9 +9,9 @@ public final class NumberSchema extends BaseSchema {
     }
 
     public NumberSchema positive() {
-//        addCheck("positive", value -> value == null || ((int) value) > 0);
         addCheck("positive", value -> value == null || !(value instanceof Integer) || (Integer) value > 0);
-        //Так как предлагал ты - не работает. По условию null проверяется этим предикатом как true
+        //Так как предлагал ты - не работает. По условию null проверяется этим предикатом как true. Если убрать
+        //instanceof то ваши тесты хекслет не проходят
         return this;
     }
 
