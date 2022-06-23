@@ -12,6 +12,9 @@ public abstract class  BaseSchema {
     public final Map<String, Predicate> getPredicates() {
         return predicates;
     }
+    protected final void addCheck(String name, Predicate predicate) {
+        predicates.put(name, predicate);
+    }
 /**
  * Проверка схемы на валидность.
  * @param o - любой объект для проверки
@@ -21,6 +24,7 @@ public abstract class  BaseSchema {
         if (predicates.size() == 0) {
             return true;
         }
+
         for (Predicate p : predicates.values()) {
             if (!p.test(o)) {
                 return false;
