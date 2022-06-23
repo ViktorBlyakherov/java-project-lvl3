@@ -8,9 +8,8 @@ public final class StringSchema extends BaseSchema {
         return this;
     }
 
-    public StringSchema minLength(Integer countDigit) {
-        addCheck("minLength", value -> value != null && value instanceof String
-                && ((String) value).length() >= countDigit);
+    public StringSchema minLength(int countDigit) {
+        addCheck("minLength", value -> ((String) value).length() >= countDigit);
         return this;
     }
 

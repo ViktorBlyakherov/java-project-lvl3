@@ -25,9 +25,8 @@ public final class MapSchema extends BaseSchema {
         return this;
     }
 
-    public MapSchema sizeof(Integer size) {
-        addCheck("sizeof", value -> value != null && value instanceof Map<?, ?>
-                && ((Map<?, ?>) value).size() == size);
+    public MapSchema sizeof(int size) {
+        addCheck("sizeof", value -> ((Map) value).size() == size);
         return this;
     }
 }
