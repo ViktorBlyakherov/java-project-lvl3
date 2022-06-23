@@ -37,6 +37,14 @@ public class TestValidator {
         assertEquals(schema.contains("whatthe").isValid("what does the fox say"), false); // false
 
         assertEquals(schema.isValid("what does the fox say"), false); // false
+
+        schema = v.string();
+
+        schema.minLength(2);
+        assertEquals(schema.isValid("null"), true);
+        assertEquals(schema.isValid("what does the fox say"), true); // true
+        assertEquals(schema.isValid("w"), false); // false
+
     }
 
     @Test

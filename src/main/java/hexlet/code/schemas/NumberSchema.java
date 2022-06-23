@@ -9,7 +9,7 @@ public final class NumberSchema extends BaseSchema {
     }
 
     public NumberSchema positive() {
-        addCheck("positive", value -> value == null || ((int) value) > 0);
+        addCheck("positive", value -> ((int) value) > 0);
         //Так как предлагал ты - не работает. По условию null проверяется этим предикатом как true
         return this;
     }
